@@ -1,0 +1,187 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(18, 18, 20, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.modal-content {
+  background-color: #ffffff;
+  margin-top: 12%;
+  width: 30%;
+  max-height: 360px;
+  border-radius: 4px;
+
+}
+
+.divModalHeader {
+  width: 100%;
+  height: 15%;
+  background: #27ae60;
+  display: flex;
+  align-items: center;
+  border-radius: 5px 5px 0px 0px;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.modalTitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f8f9fa;
+}
+.buttonCloseModal {
+  max-width: 11px;
+  width: 100%;
+  height: 1.625rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.buttonCloseModal:hover {
+  color: #ffffff;
+  -webkit-transform: scale(1.1);
+  -webkit-transition: scale(1.1);
+}
+
+.ulModal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-radius: 0px 0px 5px 5px;
+  height: 155px;
+  overflow: auto;
+}
+
+.liModal {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.imgModal {
+  width: 20%;
+  height: 40%;
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+
+.divLi {
+  background: transparent;
+  align-items: baseline;
+  flex-direction: column;
+  margin-left: 7px;
+  gap: 21px;
+  display: flex;
+  width: 50%;
+}
+
+.titleH3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333
+}
+
+.divPreco {
+  display: flex;
+  border: 2px solid #F2F2F2;
+  height: 28px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.buttonMaisMenos {
+  color: #EB5757;
+  background: #F2F2F2;
+  width: 27px;
+  height: 100%;
+}
+
+.spanCounter {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+
+
+.buttonTrash {
+  background-image: url("../../img/trash.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 57px;
+}
+
+.divTotal {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  flex-wrap: wrap;
+  border-top: 1px solid #E0E0E0;
+  align-items: center;
+  justify-content: space-around;
+  gap: 218px;
+}
+
+.precoP {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 14px;
+  color: #828282;
+}
+
+.buttonTodos {
+  height: 60px;
+  width: 95%;
+  margin-left: 9px;
+  border-radius: 8px;
+  padding: 0px 20px 0px 20px;
+  background: #E0E0E0;
+  color: #828282;
+}
+
+.buttonTodos:hover {
+  background: #828282;
+  color: #E0E0E0;
+}
+
+.divEmpty {
+  background: transparent;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.imgBag {
+  max-width: 80%;
+}
+
+@media (max-width: 700px) {
+  .divModal {
+    width: 83%;
+  }
+}

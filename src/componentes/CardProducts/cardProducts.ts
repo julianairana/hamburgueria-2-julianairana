@@ -13,7 +13,7 @@ export const CardProduct = styled.li`
   min-width: 200px;
 
   &:hover {
-    border: 2px solid #333333;
+    border: 2px solid #27ae60;
   }
 
   .imgProduct {

@@ -1,9 +1,15 @@
 
+import { useContext } from "react";
 import { CardProducts } from "../../componentes/CardProducts";
+import { ModalContext } from "../../contexts/ModalContext";
 import logoBurguer from "../../img/LogoBurguer.png";
 import { ContainerHome } from "./homePage";
+import { ModalCart } from "../../componentes/ModalCart";
 
 export const HomePage = () => {
+
+  const { handleModal, modalIsOpen } = useContext(ModalContext);
+
     return (
     <ContainerHome>
     <div className="divHeader">
@@ -17,7 +23,7 @@ export const HomePage = () => {
         <button className="buttonPesquisar"></button>
       </div>
       <div className="divButton">
-        <button className="buttonAddCart"></button>
+        <button className="buttonAddCart" onClick={handleModal}></button>
         <button className="buttonSair"></button>
       </div>
     </div>
@@ -34,6 +40,7 @@ export const HomePage = () => {
 
         </ul>
     </div>
+    {modalIsOpen && <ModalCart/> }
     </ContainerHome>
     )
 }
