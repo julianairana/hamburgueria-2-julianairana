@@ -6,19 +6,25 @@ import bolinhas from "../../img/Group.png";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "./registerSchema";
+import { UserContext } from "../../contexts/UserContext";
+import { useContext } from "react";
 
-interface iRegisterForm {
+export interface iRegisterForm {
   name: string;
   email: string;
   password: string;
-  passwordConfirm: string;
+  passwordConfirm?: string;
 }
 
 export const RegisterPage = () => {
+
+  const { RegisterUser, setLoading } = useContext(UserContext);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<iRegisterForm>({
     mode: "onBlur",
     defaultValues: {
@@ -31,7 +37,10 @@ export const RegisterPage = () => {
   });
 
   const submit: SubmitHandler<iRegisterForm> = async (data) => {
-    console.log(data);
+    const response = { ...data };
+    delete response.passwordConfirm;
+    await RegisterUser(response, setLoading);
+    reset();
   };
 
   return (

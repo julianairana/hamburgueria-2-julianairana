@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import App from './App';
 import { GlobalStyle } from './styles/GlobalStyles';
+import { UserProvider } from './contexts/UserContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
 <BrowserRouter>
 <GlobalStyle/>
+<UserProvider>
     <App />
+</UserProvider>
 
     <ToastContainer
         position="top-right"
