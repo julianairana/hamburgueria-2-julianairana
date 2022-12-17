@@ -6,14 +6,18 @@ import bag from "../../img/Bag.png";
 import bolinhas from "../../img/Group.png";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "./loginSchema";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
-interface iLoginForm {
+export interface iLoginForm {
   email: string;
   password: string;
 }
 
 
 export const LoginPage = () => {
+
+  const { LoginUser, setLoading } = useContext(UserContext);
 
   const {
     register,
@@ -29,7 +33,9 @@ export const LoginPage = () => {
   });
 
   const submit: SubmitHandler<iLoginForm> = async (data) => {
-    console.log(data);
+    const response = { ...data };
+    await LoginUser(response, setLoading);
+    console.log(response)
   };
 
   return (

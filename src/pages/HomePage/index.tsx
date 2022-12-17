@@ -1,14 +1,29 @@
-
 import { useContext } from "react";
 import { CardProducts } from "../../componentes/CardProducts";
 import { ModalContext } from "../../contexts/ModalContext";
 import logoBurguer from "../../img/LogoBurguer.png";
 import { ContainerHome } from "./homePage";
 import { ModalCart } from "../../componentes/ModalCart";
+import { UserContext } from "../../contexts/UserContext";
+import { useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
 
   const { handleModal, modalIsOpen } = useContext(ModalContext);
+
+  const { newLoading } = useContext(UserContext);
+  const navigate = useNavigate();
+
+ 
+
+  function logout () {
+    if(newLoading) {
+      return null;
+    }
+    navigate("/");
+    localStorage.removeItem("@TOKEN");
+
+  }
 
     return (
     <ContainerHome>
@@ -24,7 +39,7 @@ export const HomePage = () => {
       </div>
       <div className="divButton">
         <button className="buttonAddCart" onClick={handleModal}></button>
-        <button className="buttonSair"></button>
+        <button className="buttonSair" onClick={logout}></button>
       </div>
     </div>
     <div>
