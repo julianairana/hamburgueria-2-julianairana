@@ -25,6 +25,7 @@ interface iCartProducts {
   id: number;
   name: string;
   img: string;
+  price: number;
 }
 
 export const CartContext = createContext({} as iModalProps);
@@ -38,9 +39,11 @@ export function CartProvider({ children }: iModalProviderProps) {
   const [products, setProducts] = useState([] as iProducts[]);
   const [cartProducts, setCartProducts] = useState([] as iProducts[]);
 
+
   useEffect(() => {
     async function getProducts() {
       const tokenValidate = localStorage.getItem("@TOKEN");
+
       if (tokenValidate) {
         try {
           api.defaults.headers.authorization = `Bearer ${tokenValidate}`;

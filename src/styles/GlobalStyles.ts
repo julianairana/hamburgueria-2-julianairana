@@ -19,4 +19,7 @@ button{
     border:none;
 }
 
+body, html {
+    overflow-X: hidden !important;
+}
 `

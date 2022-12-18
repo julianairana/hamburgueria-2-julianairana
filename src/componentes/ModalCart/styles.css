@@ -15,13 +15,13 @@
   left: 0;
   right: 0;
 }
+
 .modal-content {
   background-color: #ffffff;
   margin-top: 12%;
   width: 30%;
   max-height: 360px;
   border-radius: 4px;
-
 }
 
 .divModalHeader {
@@ -141,8 +141,8 @@
   flex-wrap: wrap;
   border-top: 1px solid #E0E0E0;
   align-items: center;
-  justify-content: space-around;
-  gap: 218px;
+  justify-content: space-between;
+  padding: 15px 23px;
 }
 
 .precoP {
@@ -181,7 +181,15 @@
 }
 
 @media (max-width: 700px) {
+  .modal-content {
+    width: 95%;
+  }
+
   .divModal {
-    width: 83%;
+    width: 100%;
+  }
+
+  .divTotal {
+    gap: 0px;
   }
 }

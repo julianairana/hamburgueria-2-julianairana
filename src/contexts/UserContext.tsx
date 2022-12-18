@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { iRegisterForm } from "../pages/ResgisterPage";
 import { useNavigate } from "react-router-dom";
 import { api } from "../services/api";
@@ -56,8 +56,6 @@ export function UserProvider({ children }: iUserProviderProps) {
   const [newLoading, setNewLoading] = useState(true);
   const navigate = useNavigate();
 
-  
-
   async function LoginUser  ( data: iDataToLogin,
   setLoading: React.Dispatch<React.SetStateAction<boolean>>
 ) {
@@ -67,6 +65,7 @@ export function UserProvider({ children }: iUserProviderProps) {
       localStorage.setItem("@TOKEN", response.data.accessToken);
       setUser(response.data);
       toast.success("Login realizado com sucesso!");
+      api.defaults.headers.authorization = `Bearer ${response.data.accessToken}`;
 
       setTimeout(() => {
         navigate("/home");

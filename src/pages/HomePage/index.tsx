@@ -42,7 +42,7 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="divUl">
-        <ul>
+        <ul className="ulCard">
           {productsFilter?.map((element) => (
             <CardProducts key={element.id} element={element} />
           ))}

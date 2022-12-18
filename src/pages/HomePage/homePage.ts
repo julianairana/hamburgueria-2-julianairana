@@ -81,7 +81,7 @@ export const ContainerHome = styled.div`
     margin-right: 63px;
   }
 
-  ul {
+  .ulCard {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -96,16 +96,31 @@ export const ContainerHome = styled.div`
     display: flex;
     flex-direction: column;
 
-    .divUl {
-      margin: 0 auto;
-      width: 100%
-      margin-top: 25px;
+    .divHeader {
+      padding: 18.28px 10.19px;
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
     }
 
-    ul {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow: auto;
+    .divButton {
+      margin-right: 0px;
+    }
+
+    .imgLogo {
+      margin-left: 0px;
+      width: 158.94px;
+      height: 36.83px;
+    }
+    
+   .ulCard {
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 10px;
+
     }
 
     .divForm {

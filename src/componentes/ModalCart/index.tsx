@@ -57,7 +57,10 @@ export const ModalCart = () => {
           <div className="div">
             <div className="divTotal">
               <h3 className="titleH3">Total</h3>
-              <p className="precoP">R$14,00</p>
+              <p className="precoP">R${" "}
+                {cartProducts
+                  ?.reduce((acc, act) => acc + act.price, 0)
+                  .toFixed(2)}</p>
             </div>
             <button
               className="buttonTodos"
