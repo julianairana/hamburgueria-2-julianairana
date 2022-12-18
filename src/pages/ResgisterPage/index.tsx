@@ -46,7 +46,7 @@ export const RegisterPage = () => {
   return (
     <Register>
       <div className="divLeft">
-        <img src={logoBurguer} alt="logo" />
+        <img src={logoBurguer} alt="logo" className="imgLogo" />
         <div className="divCard">
           <img src={bag} alt="bag" className="imgBag" />
           <span>

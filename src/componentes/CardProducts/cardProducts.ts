@@ -26,11 +26,11 @@ export const CardProduct = styled.li`
   .divLi {
     display: flex;
     flex-direction: column;
-    /* margin-left: 40px;
-        width: 60%; */
     gap: 10px;
     align-items: baseline;
     margin-top: 10px;
+    width: 90%;
+    margin-top: 15px;
   }
 
   h2 {

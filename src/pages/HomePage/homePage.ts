@@ -13,10 +13,8 @@ export const ContainerHome = styled.div`
     align-items: center;
     width: 100%;
     height: 70px;
-    /* justify-content: space-between; */
     background: #f5f5f5;
     justify-content: space-evenly;
-
   }
 
   .imgLogo {
@@ -58,11 +56,6 @@ export const ContainerHome = styled.div`
     background-image: url(${pesquisar});
     background-repeat: no-repeat;
     background-position: center;
- 
-  }
-
-  .buttonPesquisar:hover {
-    background: #93d7af;
   }
 
   .buttonAddCart {
@@ -81,15 +74,15 @@ export const ContainerHome = styled.div`
     background-image: url(${sair});
     background-repeat: no-repeat;
     margin-top: 12px;
-}
+  }
 
-.divButton {
-  display: flex;
-  margin-right: 63px;
-}
+  .divButton {
+    display: flex;
+    margin-right: 63px;
+  }
 
   ul {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin: 30px 0 0 41px;
@@ -98,30 +91,26 @@ export const ContainerHome = styled.div`
     justify-content: center;
   }
 
-  @media (max-width: 700px) {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-
-    .imgLogo {
-      margin: 30px;
-    }
-  }
-
   @media (max-width: 900px) {
     width: 100%;
     display: flex;
     flex-direction: column;
 
-    input {
-      width: 250px;
-      max-width: 100%;
+    .divUl {
+      margin: 0 auto;
+      width: 100%
+      margin-top: 25px;
     }
 
-    button {
-      width: 107px;
-      max-width: 70%;
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: auto;
     }
+
+    .divForm {
+      display: none;
+    }
+
   }
 `;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+
 export const Login = styled.div`
-   width: 100vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -45,11 +46,6 @@ export const Login = styled.div`
         font-size: 12px;
         line-height: 15px;
         color: #999999;
-        /* position: absolute;
-    transform: translateY(-50%);
-    background-color: white;
-    padding: 5px;
-    margin-left: 20px; */
     }
 
     input {
@@ -132,12 +128,29 @@ export const Login = styled.div`
         width: 60px;
         height: 60px;
         object-fit: none;
+        display: flex;
     }
 
     @media (max-width: 900px) {
+            flex-direction: column-reverse;
             width: 100%;
             display: flex;
-            flex-direction: column;
             align-items: center;
+       
+            .divRight {
+                width: 100%;
+                align-items: center;
+            }
+
+            .divLeft {
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+        .imgBolinhas{
+            display: none;
         }
+         
+    }
 `
