@@ -120,6 +120,7 @@ export const ContainerHome = styled.div`
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 10px;
+    overflow: auto;
 
     }
 
